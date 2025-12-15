@@ -37,6 +37,27 @@ body {
   text-align: center;
 }
 
+.ac {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.at {
+  flex: 1;
+}
+
+.ai {
+  flex: 1;
+}
+
+.ai img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+
 .studyjourney {
   max-width: 800px;
   margin: 50px auto;
@@ -91,6 +112,8 @@ body {
   transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
   opacity: 0;
   transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
 }
 
 .card.visible {
@@ -114,6 +137,7 @@ body {
 
 .card p {
   padding: 0 15px 15px 15px;
+  flex-grow: 1;
 }
 
 .card a {
@@ -284,3 +308,34 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ac,
+  .sc {
+    flex-direction: column;
+  }
+
+  .ai img,
+  .si img {
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+

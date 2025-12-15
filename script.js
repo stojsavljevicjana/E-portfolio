@@ -12,7 +12,6 @@ function revealCards() {
 window.addEventListener('scroll', revealCards);
 window.addEventListener('load', revealCards);
 
-// Dropdown za telefone (klik)
 document.querySelectorAll('.dropdown').forEach(drop => {
   const button = drop.querySelector('.dropbtn');
 
@@ -22,7 +21,6 @@ document.querySelectorAll('.dropdown').forEach(drop => {
   });
 });
 
-// Zatvaranje dropdowna kada klikneš izvan njega
 document.addEventListener('click', (e) => {
   document.querySelectorAll('.dropdown').forEach(drop => {
     if (!drop.contains(e.target)) {
@@ -30,3 +28,22 @@ document.addEventListener('click', (e) => {
     }
   });
 });
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 100;
+
+  reveals.forEach(reveal => {
+    const revealTop = reveal.getBoundingClientRect().top;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveal.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+

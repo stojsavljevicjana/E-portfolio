@@ -57,7 +57,6 @@ body {
   border-radius: 12px;
 }
 
-
 .studyjourney {
   max-width: 800px;
   margin: 50px auto;
@@ -84,7 +83,6 @@ body {
   max-width: 400px;
   border-radius: 12px;
 }
-
 
 .portfolio {
   max-width: 1200px;
@@ -339,3 +337,25 @@ body {
   }
 }
 
+.logos {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 20px; 
+  background-color: #e9ecef;              
+}
+
+#logo_image1 {
+  border-radius: 15%;
+  width: 150px;
+}
+
+#logo_image2 {
+  border-radius: 15%;
+  width: 200px;
+}
+
+#logo_image3 {
+  border-radius: 15%;
+  width: 250px;
+}
